@@ -8,7 +8,6 @@ on:
 
 jobs:
   build-and-unit-test:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -22,8 +21,9 @@ jobs:
     - run: npm run test:unit
     - run: echo 'MarioPetkov312'
     
-    build-and-ui-test:
-    needs: build-and-unit-test 
+  build-and-ui-test:
+    needs: build-and-unit-test
+    
     runs-on: ubuntu-latest
 
     steps:
